@@ -18,9 +18,9 @@ let lighterBike = biciDaCorsa[0];
 
 // let's start from 1 because i have already biciDaCorsa[0]
 for (i = 1; i < biciDaCorsa.length; i++) {
-    Element = biciDaCorsa[i];
-    if (Element.peso < lighterBike.peso) {
-        lighterBike = Element;
+    let element = biciDaCorsa[i];
+    if (element.peso < lighterBike.peso) {
+        lighterBike = element;
     }
 
 }

@@ -13,8 +13,22 @@ const squadreDiCalcio = [
     { nome: 'Napoli', puntiFatti: 0, falliSubiti: 0 }
 ]
 
-
-function randNumber(min, max) {
-    return Math.floor((Math.random() * max) + min);
+// let's generate random numbers for the proprieties
+for (let i = 0; i < squadreDiCalcio.length; i++) {
+    let element = squadreDiCalcio[i];
+    element.puntiFatti = Math.floor((Math.random() * 50) + 1);
+    element.falliSubiti = Math.floor((Math.random() * 50) + 1);
 }
+
+// let's use the new for in and push datas on finalArray
+let finalArray = [];
+for (let key in squadreDiCalcio) {
+    finalArray.push(squadreDiCalcio[key].nome, squadreDiCalcio[key].falliSubiti);
+}
+const resultArray = document.getElementById("result")
+
+
+console.log(finalArray);//print on console
+resultArray.innerHTML = `I nomi delle squadre e dei falli rispettivamente sono ${finalArray}`
+
 
