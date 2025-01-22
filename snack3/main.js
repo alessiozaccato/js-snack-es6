@@ -4,7 +4,19 @@ La funzione ritornerà un nuovo array con li elementi estratti dall'array di par
 
 const arrayNames = ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'];
 
-// function newArray(newArrayNames, num1, num2) {
-//     for (i = 0; i < newArrayNames.lenght; i++) {
 
-//     }
+function newArray(newArrayNames, min, max) {
+
+    const resultArray = [];
+
+    for (i = 0; i < newArrayNames.length; i++) {
+        if (i >= min && i <= max) {
+            resultArray.push(newArrayNames[i])
+        }
+
+    }
+    return resultArray;
+}
+
+console.log(newArray(arrayNames, 2, 3));
+
